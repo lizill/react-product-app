@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { AxiosError } from "axios";
+import { Link } from "react-router-dom";
 import { getProducts } from "../../api/products";
 import { IProduct } from "../../api/products/Product";
 
@@ -16,7 +17,9 @@ const ProductList = () => {
   return (
     <>
       {data.map((product) => (
-        <div key={product.id}>{product.name}</div>
+        <div key={product.id}>
+          <Link to={`/products/${product.id}`}>{product.name}</Link>
+        </div>
       ))}
     </>
   );

@@ -1,16 +1,14 @@
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
 import { FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { createProduct } from "../../api/products";
 import { IProductPayload } from "../../api/products/Product";
 
 const CreateProduct = () => {
-  const queryClient = useQueryClient();
   const navigate = useNavigate();
 
-  const mutation = useMutation(createProduct, {
+  const createNewProduct = useMutation(createProduct, {
     onSuccess: () => {
-      queryClient.invalidateQueries(["products"]);
       navigate("/");
     },
   });
@@ -33,7 +31,7 @@ const CreateProduct = () => {
       timestamp: new Date(),
     };
     console.log(newProduct);
-    mutation.mutate(newProduct);
+    createNewProduct.mutate(newProduct);
   };
 
   return (
