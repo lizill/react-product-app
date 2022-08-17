@@ -2,13 +2,13 @@
   "products": [
     {
       "id": "1",
-      "name": "test product 1d",
+      "name": "test product 1",
       "contents": "this is test product 1, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa corrupti explicabo sapiente vero, nisi reprehenderit molestias a amet eligendi, at fugiat consequatur alias temporibus, eius dicta voluptatem dolorum ab magni!",
       "timestamp": "2022-08-17T07:18:27.036Z"
     },
     {
       "id": "2",
-      "name": "dfdfdfasdfw",
+      "name": "test product 2",
       "contents": "this is test product 2, Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nisi voluptatum, molestiae voluptatem odit nihil similique expedita assumenda iste officia suscipit. Ipsa tenetur inventore quasi quam cum reiciendis mollitia eaque.",
       "timestamp": "2022-08-17T07:19:01.247Z"
     },
@@ -23,12 +23,6 @@
       "name": "New Product",
       "contents": "This is a new product, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, aspernatur asperiores blanditiis recusandae vel voluptates temporibus aliquid ipsum deleniti aliquam magnam molestiae? Aut eveniet, quos explicabo consectetur quis in provident?",
       "timestamp": "2022-08-17T06:51:03.007Z"
-    },
-    {
-      "name": "dfdfwfaw",
-      "contents": "asdfwdzcvasdfwe",
-      "timestamp": "2022-08-17T07:46:15.164Z",
-      "id": "B5G14hx"
     }
   ]
 }
