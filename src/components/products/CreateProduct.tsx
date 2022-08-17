@@ -35,31 +35,48 @@ const CreateProduct = () => {
   };
 
   return (
-    <>
-      <h1>create new product</h1>
+    <div className="px-6">
+      <h1 className="text-2xl font-light mt-8">Create new products</h1>
+
+      <hr className="my-6 w-12 border-2 border-green-600" />
 
       <div>
-        <form onSubmit={(e: FormEvent) => handleSubmit(e)}>
-          <div>
-            <label htmlFor="name">Name</label>
-            <input type="text" name="name" id="name" />
+        <form
+          className="flex flex-col gap-4"
+          onSubmit={(e: FormEvent) => handleSubmit(e)}
+        >
+          <div className="flex flex-col gap-2">
+            <label className="text-gray-500 font-light text-sm" htmlFor="name">
+              Name
+            </label>
+            <input
+              className="border-[1px] border-gray-400 rounded px-4 py-2"
+              type="text"
+              name="name"
+              id="name"
+            />
           </div>
-          <div>
-            <label htmlFor="contents">Content</label>
+          <div className="flex flex-col gap-2">
+            <label
+              className="text-gray-500 font-light text-sm"
+              htmlFor="contents"
+            >
+              Content
+            </label>
             <textarea
+              className="border-[1px] border-gray-400 rounded px-4 py-2"
               name="contents"
               id="contents"
               cols={30}
               rows={10}
             ></textarea>
           </div>
-          <div>
-            <button>Cancel</button>
-            <button>Save</button>
+          <div className="flex justify-end">
+            <button className="text-green-600 text-lg">Create</button>
           </div>
         </form>
       </div>
-    </>
+    </div>
   );
 };
 
