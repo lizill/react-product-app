@@ -8,7 +8,7 @@
 - MOCK API Server 활용
 - useState, useEffect, useLocation, React Routing
 
-## 실행방법
+## 실행 방법
 
 1. git 명령어로 레포지토리를 클론
 

@@ -1701,6 +1701,11 @@
     "@svgr/plugin-svgo" "^5.5.0"
     loader-utils "^2.0.0"
 
+"@tailwindcss/line-clamp@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/line-clamp/-/line-clamp-0.4.0.tgz#03353e31e77636b785f2336e8c978502cec1de81"
+  integrity sha512-HQZo6gfx1D0+DU3nWlNLD5iA6Ef4JAXh0LeD8lOGrJwEDBwwJNKQza6WoXhhY1uQrxOuU8ROxV7CqiQV4CoiLw==
+
 "@tanstack/query-core@^4.0.0-beta.1":
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-4.1.2.tgz#b13744d6ded73c5ae9760a61a6c39501c3cb1bda"

@@ -1,6 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { AxiosError } from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import {
   getProductById,
@@ -36,9 +36,6 @@ const ShowProduct = () => {
       };
 
       updateProduct.mutate(updatedProduct);
-    } else {
-      setName(data?.name + "");
-      setContents(data?.contents + "");
     }
     setIsUpdating(!isUpdating);
   };
@@ -61,6 +58,11 @@ const ShowProduct = () => {
     },
   });
 
+  useEffect(() => {
+    setName(data?.name + "");
+    setContents(data?.contents + "");
+  }, [data]);
+
   if (isLoading) return <LoaderComponent />;
 
   if (error) return <div>error: {error.message}</div>;
@@ -79,7 +81,7 @@ const ShowProduct = () => {
           <input
             className="border-[1px] border-gray-400 rounded px-4 py-2"
             disabled={!isUpdating}
-            value={isUpdating ? name : data.name}
+            value={name}
             onChange={(e) => setName(e.target.value)}
           />
         </div>
@@ -95,7 +97,7 @@ const ShowProduct = () => {
             cols={30}
             rows={10}
             disabled={!isUpdating}
-            value={isUpdating ? contents : data.contents}
+            value={contents}
             onChange={(e) => setContents(e.target.value)}
           />
         </div>

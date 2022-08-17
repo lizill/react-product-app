@@ -9,7 +9,7 @@ const ProductItem = ({ product }: Props) => {
     <div className="flex flex-col gap-2 group">
       <div className="h-56 bg-slate-400 rounded"></div>
       <h3 className="text-lg font-light">{product.name}</h3>
-      <p className="font-extralight">{product.contents}</p>
+      <p className="font-extralight line-clamp-2">{product.contents}</p>
       <div className="flex">
         <p className="text-lg font-light text-green-700">
           <span className="group-hover:decoration-2 group-hover:underline">
