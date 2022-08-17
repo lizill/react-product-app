@@ -63,7 +63,12 @@ const ShowProduct = () => {
     setContents(data?.contents + "");
   }, [data]);
 
-  if (isLoading) return <LoaderComponent />;
+  if (isLoading)
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <LoaderComponent />
+      </div>
+    );
 
   if (error) return <div>error: {error.message}</div>;
 
