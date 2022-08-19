@@ -30,7 +30,6 @@ const CreateProduct = () => {
       contents,
       timestamp: new Date(),
     };
-    console.log(newProduct);
     createNewProduct.mutate(newProduct);
   };
 

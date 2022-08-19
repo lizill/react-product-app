@@ -39,3 +39,42 @@ npx json-server ./src/db/data.json --port 4000
 ```bash
 yarn start
 ```
+
+## 요구 리액트 기능
+
+### useState
+
+```typescript
+// ShowProduct.tsx
+const [isUpdating, setIsUpdating] = useState<boolean>(false);
+const [name, setName] = useState<string>("");
+const [contents, setContents] = useState<string>("");
+```
+
+### useEffect
+
+```typescript
+// ShowProduct.tsx
+useEffect(() => {
+  setName(data?.name + "");
+  setContents(data?.contents + "");
+}, [data]);
+```
+
+### useLocation
+
+```typescript
+// HeaderComponent.tsx
+const location = useLocation();
+```
+
+### React Routing
+
+```typescript
+// App.tsx
+<Routes>
+  <Route path="/" element={<MainComponent />} />
+  <Route path="/products" element={<CreateProduct />} />
+  <Route path="/products/:id" element={<ShowProduct />} />
+</Routes>
+```
